@@ -4,9 +4,9 @@ A robust, seed-based procedural level and dungeon generator written in C++ for U
 
 This system is completely data-driven and configurable via the Unreal Editor Details Panel, making it perfect for roguelikes, dungeon crawlers, or stylized modular projects.
 
-============================
-DETAILED GENERATION WORKFLOW
-============================
+
+# DETAILED GENERATION WORKFLOW
+
 
 1. Initialization: On BeginPlay, if bGenerate is true, the system initializes an
    FRandomStream using the provided GenerationSeed (or generates a random one 
@@ -43,9 +43,9 @@ DETAILED GENERATION WORKFLOW
    remaining open sockets with a single UInstancedStaticMeshComponent (Hedges) 
    and spawns interactive GateClass actors at all successful connection points.
 
-===============================
-CRITICAL BLUEPRINT REQUIREMENTS
-===============================
+
+# CRITICAL BLUEPRINT REQUIREMENTS
+
 
 For your Room Blueprints to work seamlessly with this C++ architecture, they 
 must strictly adhere to the following component naming and structural 
@@ -73,9 +73,9 @@ hierarchy rules:
      the collision system will fail to register the overlap, causing rooms 
      to clip into each other.
 
-========================
-CONFIGURATION PROPERTIES
-========================
+
+# CONFIGURATION PROPERTIES
+
 
 Exposed parameters in the Unreal Details Panel:
 
@@ -110,13 +110,13 @@ Exposed parameters in the Unreal Details Panel:
 * EndRoomList (TArray<TSubclassOf<AActor>>) [Category: Rooms]
   Exit/Boss room blueprints selected for the final layout slot.
 
-==========
-TECH STACK
-==========
+
+# TECH STACK
+
 * Engine Compatibility: Unreal Engine 5.x (Utilizes modernized TObjectPtr engine pointers).
 * Language: C++ (Standard Unreal Engine API).
 
-=======
-LICENSE
-=======
+
+# LICENSE
+
 Copyright (c) 2026 Nikita Yesman. All rights reserved.
